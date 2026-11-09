@@ -1,0 +1,22 @@
+[
+  {
+    "archivo": "audio1.mp3",
+    "transcripcion": "¿Cuál es la diferencia entre una clave primaria y una clave foránea en MySQL? ¿Y para qué sirve la cláusula OneDeleteCascade?",
+    "respuesta": "**Clave primaria (PRIMARY KEY)**  \n- Identifica de forma única cada fila de una tabla.  \n- No puede contener valores NULL y debe ser única.  \n- Sólo puede haber una por tabla.\n\n**Clave foránea (FOREIGN KEY)**  \n- Define una relación entre dos tablas; su valor debe coincidir con una clave primaria (o única) de la tabla referenciada.  \n- Permite NULL y puede haber varias en la misma tabla.  \n- Garantiza la integridad referencial.\n\n**ON DELETE CASCADE** (no “OneDeleteCascade”)  \n- Es una opción de la restricción FOREIGN KEY.  \n- Cuando se elimina una fila de la tabla padre, MySQL elimina automáticamente todas las filas hijas que la referencian.  \n- Evita “hijos huérfanos” y simplifica el mantenimiento de datos relacionados."
+  },
+  {
+    "archivo": "audio2.mp3",
+    "transcripcion": "¿Cómo uso InnerJoin junto con GroupBy y Hubbing para contar cuántos estudiantes hay inscritos por curso?",
+    "respuesta": "Usa un **INNER JOIN** para relacionar la tabla de estudiantes con la de cursos, agrupa por el curso y cuenta los alumnos. Si solo quieres los cursos con al menos N inscripciones, agrega **HAVING**.  \n\n```sql\nSELECT c.id_curso,\n       c.nombre_curso,\n       COUNT(e.id_estudiante) AS total_inscritos\nFROM   cursos      AS c\nINNER JOIN inscripciones i ON i.id_curso = c.id_curso\nINNER JOIN estudiantes  e ON e.id_estudiante = i.id_estudiante\nGROUP BY c.id_curso, c.nombre_curso\nHAVING COUNT(e.id_estudiante) > 0;   -- opcional, filtra cursos sin alumnos\n```\n\n- **INNER JOIN** une solo los registros que coinciden.  \n- **GROUP BY** agrupa por cada curso.  \n- **COUNT()** cuenta los estudiantes por grupo.  \n- **HAVING** filtra después del agrupamiento.  \n\nAjusta los nombres de tablas/columnas a tu esquema."
+  },
+  {
+    "archivo": "audio3.mp3",
+    "transcripcion": "Explícame qué es un índice ByteTrill y cuándo conviene usar Explain antes de un Select con Where sobre una columna Varchar.",
+    "respuesta": "**Índice ByteTrill (en realidad *B‑Tree*)**  \nEs el tipo de índice predeterminado en MySQL. Guarda los valores ordenados en una estructura de árbol balanceado, permitiendo búsquedas binarias rápidas. Funciona bien con columnas `VARCHAR` cuando se buscan coincidencias exactas o prefijos (`LIKE 'abc%'`). No es útil para búsquedas con comodines al inicio (`LIKE '%abc'`) ni para datos muy poco selectivos.\n\n**Cuándo usar `EXPLAIN`**  \nAntes de ejecutar `SELECT … WHERE columna_varchar = 'valor'` o `LIKE 'prefijo%'` ejecuta `EXPLAIN`. Te muestra el plan de ejecución: si usa el índice B‑Tree, el tipo de acceso (`ref`, `range`) y el número estimado de filas. Así detectas escaneos completos, índices no usados o necesidad de crear/ajustar un índice. Use `EXPLAIN` siempre en consultas que afecten a muchas filas o que percibas lentitud."
+  },
+  {
+    "archivo": "audio4.mp3",
+    "transcripcion": "¿Qué es una transacción en InnoDB y cómo funciona commit y rollback con las propiedades ACID?",
+    "respuesta": "Una **transacción** en InnoDB es un conjunto de operaciones SQL que se ejecutan como una unidad lógica: o todas se aplican, o ninguna.  \n\n**ACID** garantiza:  \n\n- **Atomicidad**: `COMMIT` escribe permanentemente todos los cambios; `ROLLBACK` los deshace por completo.  \n- **Consistencia**: al terminar la transacción la base pasa de un estado válido a otro, respetando restricciones (FK, UNIQUE, etc.).  \n- **Aislamiento**: cada transacción ve una vista consistente de los datos; InnoDB usa niveles como **READ COMMITTED** o **REPEATABLE READ** para evitar lecturas sucias, no‑repetibles o fantasmas.  \n- **Durabilidad**: después de `COMMIT`, los cambios se registran en el log de redo y se persisten en disco, sobreviviendo a fallos.  \n\nEn resumen, `START TRANSACTION … COMMIT` confirma los cambios; `ROLLBACK` los revierte, manteniendo las garantías ACID."
+  }
+]

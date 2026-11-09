@@ -1,0 +1,14 @@
+{
+  "img1_select_where.png": {
+    "sentencia": "SELECT", "tabla_principal": "estudiantes", "num_columnas": 2,
+    "clausula_where": "semestre = 5", "num_filas_resultado": 4, "tiempo_s": 0.00
+  },
+  "img2_create_table.png": {
+    "sentencia": "CREATE TABLE", "tabla_principal": "cursos", "num_columnas": 5,
+    "clausula_where": null, "num_filas_resultado": null, "tiempo_s": 0.03
+  },
+  "img3_join_group.png": {
+    "sentencia": "SELECT", "tabla_principal": "cursos", "num_columnas": 2,
+    "clausula_where": null, "num_filas_resultado": 3, "tiempo_s": 0.01
+  }
+}

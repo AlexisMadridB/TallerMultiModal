@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "audio1.mp3",
+    "hablante": "Jose Luis Patiño",
+    "condicion": "sin ruido",
+    "texto_dicho": "¿Cuál es la diferencia entre una clave primaria y una clave foránea en MySQL, y para qué sirve la cláusula ON DELETE CASCADE?",
+    "duracion_s": 11.1,
+    "transcripcion": "¿Cuál es la diferencia entre una clave primaria y una clave foránea en MySQL? ¿Y para qué sirve la cláusula OneDeleteCascade?"
+  },
+  {
+    "archivo": "audio2.mp3",
+    "hablante": "Jordi Madrid",
+    "condicion": "sin ruido",
+    "texto_dicho": "¿Cómo uso INNER JOIN junto con GROUP BY y HAVING para contar cuántos estudiantes hay inscritos por curso?",
+    "duracion_s": 10.5,
+    "transcripcion": "¿Cómo uso InnerJoin junto con GroupBy y Hubbing para contar cuántos estudiantes hay inscritos por curso?"
+  },
+  {
+    "archivo": "audio3.mp3",
+    "hablante": "Jose Luis Patiño",
+    "condicion": "con ruido",
+    "texto_dicho": "Explícame qué es un índice B-tree y cuándo conviene usar EXPLAIN antes de un SELECT con WHERE sobre una columna VARCHAR.",
+    "duracion_s": 10.5,
+    "transcripcion": "Explícame qué es un índice ByteTrill y cuándo conviene usar Explain antes de un Select con Where sobre una columna Varchar."
+  },
+  {
+    "archivo": "audio4.mp3",
+    "hablante": "Jordi Madrid",
+    "condicion": "sin ruido",
+    "texto_dicho": "¿Qué es una transacción en InnoDB y cómo funcionan COMMIT y ROLLBACK con las propiedades ACID?",
+    "duracion_s": 10.7,
+    "transcripcion": "¿Qué es una transacción en InnoDB y cómo funciona commit y rollback con las propiedades ACID?"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "imagenes": [
+    "img4_diagrama_er.png",
+    "img2_create_table.png",
+    "img3_join_group.png"
+  ],
+  "pregunta": "Las tres imágenes pertenecen a la misma base de datos. La 1ª es el diagrama entidad-relación, la 2ª la creación de la tabla cursos y la 3ª una consulta. Indica si la tabla cursos coincide con el diagrama, si el JOIN de la consulta es coherente con las relaciones del modelo y resume en 3 frases qué calcula la consulta.",
+  "respuesta": "**1. ¿La tabla `cursos` coincide con el diagrama?**\nSí, la tabla `cursos` creada en SQL coincide exactamente con la entidad `cursos` del diagrama entidad-relación. Ambas contienen los mismos atributos: `id_curso` (clave primaria), `nombre`, `creditos`, `semestre` y `docente`.\n\n**2. ¿El JOIN de la consulta es coherente con las relaciones del modelo?**\nSí, el JOIN es coherente. La consulta une las tablas `cursos` e `inscripciones` mediante la clave foránea `id_curso`, lo cual refleja correctamente la relación \"uno a muchos\" existente en el diagrama entre estas dos entidades (un curso puede tener muchas inscripciones).\n\n**3. Resumen de la consulta (3 frases):**\nLa consulta realiza una unión entre las tablas de cursos e inscripciones para cruzar la información de ambas. A continuación, agrupa los resultados por el nombre de cada curso. Finalmente, calcula y muestra el número total de inscripciones registradas para cada uno de los cursos."
+}

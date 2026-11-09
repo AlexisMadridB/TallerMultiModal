@@ -1,0 +1,19 @@
+imagen,campo,valor_real,valor_extraido,correcto
+img1_select_where.png,sentencia,SELECT,SELECT,Sí
+img1_select_where.png,tabla_principal,estudiantes,estudiantes,Sí
+img1_select_where.png,num_columnas,2,2,Sí
+img1_select_where.png,clausula_where,semestre = 5,semestre = 5,Sí
+img1_select_where.png,num_filas_resultado,4,4,Sí
+img1_select_where.png,tiempo_s,0.0,0.0,Sí
+img2_create_table.png,sentencia,CREATE TABLE,CREATE TABLE,Sí
+img2_create_table.png,tabla_principal,cursos,cursos,Sí
+img2_create_table.png,num_columnas,5,5,Sí
+img2_create_table.png,clausula_where,,,Sí
+img2_create_table.png,num_filas_resultado,,,Sí
+img2_create_table.png,tiempo_s,0.03,0.03,Sí
+img3_join_group.png,sentencia,SELECT,SELECT,Sí
+img3_join_group.png,tabla_principal,cursos,cursos,Sí
+img3_join_group.png,num_columnas,2,2,Sí
+img3_join_group.png,clausula_where,,,Sí
+img3_join_group.png,num_filas_resultado,3,3,Sí
+img3_join_group.png,tiempo_s,0.01,0.01,Sí

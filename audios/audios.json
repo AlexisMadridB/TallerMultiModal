@@ -1,0 +1,10 @@
+[
+  {"archivo": "audio1.mp3", "hablante": "Jose Luis Patiño", "condicion": "sin ruido",
+   "texto_dicho": "¿Cuál es la diferencia entre una clave primaria y una clave foránea en MySQL, y para qué sirve la cláusula ON DELETE CASCADE?"},
+  {"archivo": "audio2.mp3", "hablante": "Jordi Madrid", "condicion": "sin ruido",
+   "texto_dicho": "¿Cómo uso INNER JOIN junto con GROUP BY y HAVING para contar cuántos estudiantes hay inscritos por curso?"},
+  {"archivo": "audio3.mp3", "hablante": "Jose Luis Patiño", "condicion": "con ruido",
+   "texto_dicho": "Explícame qué es un índice B-tree y cuándo conviene usar EXPLAIN antes de un SELECT con WHERE sobre una columna VARCHAR."},
+  {"archivo": "audio4.mp3", "hablante": "Jordi Madrid", "condicion": "sin ruido",
+   "texto_dicho": "¿Qué es una transacción en InnoDB y cómo funcionan COMMIT y ROLLBACK con las propiedades ACID?"}
+]

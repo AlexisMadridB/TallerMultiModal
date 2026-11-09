@@ -1,0 +1,21 @@
+{
+  "detalle": {
+    "img1_select_where.png": {
+      "respuesta_cruda": "{\n  \"sentencia\": \"SELECT\",\n  \"tabla_principal\": \"estudiantes\",\n  \"num_columnas\": 2,\n  \"clausula_where\": \"semestre = 5\",\n  \"num_filas_resultado\": 4,\n  \"tiempo_s\": 0.00\n}",
+      "valido": true,
+      "errores_esquema": []
+    },
+    "img2_create_table.png": {
+      "respuesta_cruda": "{\n  \"sentencia\": \"CREATE TABLE\",\n  \"tabla_principal\": \"cursos\",\n  \"num_columnas\": 5,\n  \"clausula_where\": null,\n  \"num_filas_resultado\": null,\n  \"tiempo_s\": 0.03\n}",
+      "valido": true,
+      "errores_esquema": []
+    },
+    "img3_join_group.png": {
+      "respuesta_cruda": "{\n  \"sentencia\": \"SELECT\",\n  \"tabla_principal\": \"cursos\",\n  \"num_columnas\": 2,\n  \"clausula_where\": null,\n  \"num_filas_resultado\": 3,\n  \"tiempo_s\": 0.01\n}",
+      "valido": true,
+      "errores_esquema": []
+    }
+  },
+  "aciertos": 18,
+  "total": 18
+}

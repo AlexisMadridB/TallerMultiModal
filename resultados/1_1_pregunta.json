@@ -1,0 +1,5 @@
+{
+  "imagen": "img5_error_sintaxis.png",
+  "pregunta": "Esta captura es de un cliente MySQL. ¿Qué error muestra, cuál es su causa y cómo se corrige la sentencia?",
+  "respuesta": "El error 1064 ocurre porque la palabra clave `SELECT` está mal escrita como `SELCT`, lo que invalida la sintaxis SQL.\n\n```sql\nSELECT * FROM estudiantes;\n-- Se corrige escribiendo correctamente la palabra clave SELECT.\n```"
+}
